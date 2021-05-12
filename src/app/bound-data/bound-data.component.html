@@ -1,0 +1,16 @@
+<!-- Two Way Binding -- using the input field to update a property -->
+<input class="form-control"
+       type="text"
+       name="firstName"
+       value=""
+       [(ngModel)]="firstName" />
+<!-- String Interpolation -- to display the property -->
+<p>{{firstName}}</p>
+<!-- events and properties -->
+<!-- adding a click event to clear the input field -->
+<!-- check if firstName property is empty then disable the botton -->
+<button class="btn btn-primary"
+        (click)="firstName=''"
+        [disabled]="firstName===''">
+  Reset User
+</button>
